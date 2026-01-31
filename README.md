@@ -1,6 +1,26 @@
 # Memoria de la Tarea PSP03: Programación de Sockets en Java
 
-[Enlace al repositorio en GitHub](https://github.com/little-shiny/PSP03-Sockets)
+### [Enlace al repositorio en GitHub](https://github.com/little-shiny/PSP03-Sockets)
+
+## Índice
+- [Memoria de la Tarea PSP03: Programación de Sockets en Java](#memoria-de-la-tarea-psp03-programación-de-sockets-en-java)
+  - [Enlace al repositorio en GitHub](#enlace-al-repositorio-en-github)
+  - [Índice](#índice)
+  - [Introducción](#introducción)
+  - [Actividad 3.1: Juego de adivinar el número (Puerto 2000)](#actividad-31-juego-de-adivinar-el-número-puerto-2000)
+    - [Explicación del Código](#explicación-del-código)
+      - [1. `ServidorAdivina.java`](#1-servidoradivinajava)
+      - [2. `ClienteAdivina.java`](#2-clienteadivinajava)
+  - [Actividad 3.2: Transferencia de Ficheros (Puerto 1500)](#actividad-32-transferencia-de-ficheros-puerto-1500)
+    - [Explicación del Código](#explicación-del-código-1)
+      - [1. ServidorFicheros.java](#1-servidorficherosjava)
+      - [2. ClienteFicheros.java](#2-clienteficherosjava)
+  - [Estructura de Paquetes y Organización](#estructura-de-paquetes-y-organización)
+  - [Pruebas realizadas](#pruebas-realizadas)
+  - [Conclusión](#conclusión)
+
+
+
 
 ## Introducción
 
@@ -23,8 +43,8 @@ El servidor genera un número aleatorio y el cliente intenta adivinarlo. La comu
 
 * **Conexión**: Se conecta a `localhost` (mi propio PC) en el puerto 2000.
 * **Scanner**: Lo uso para que el usuario pueda escribir los números por consola.
-* **Condición de salida**: El programa no para hasta que el servidor responde con la frase que contiene la palabra 
-  "ese", porque al adivinar el número en mi código aparece: `flujoSalida.writeUTF("Ese era el número!!!!")` y lo 
+* **Condición de salida**: El programa no para hasta que el servidor responde con la frase que contiene la palabra
+  "ese", porque al adivinar el número en mi código aparece: `flujoSalida.writeUTF("Ese era el número!!!!")` y lo
   utilizo como "pista" para que el programa detecte que lo ha adivinado.
 
 
@@ -44,7 +64,7 @@ Aquí el cliente pide un archivo por su nombre. Si el servidor lo tiene en su ca
 #### 2. ClienteFicheros.java
 
 * **Petición**: Lo primero que hace es mandar el nombre del archivo (ejemplo: `ArchivoPruebas32.txt`).
-* **Lectura**: Uso un bucle `while` que lee del socket hasta que no llega nada más (`null`), lo que significa que el 
+* **Lectura**: Uso un bucle `while` que lee del socket hasta que no llega nada más (`null`), lo que significa que el
   servidor ha terminado de enviar y ha cerrado el flujo de datos.
 
 
@@ -75,10 +95,10 @@ Esto evita que las clases se mezclen y permite que los servidores usen sus puert
 
 2. **Actividad 3.2**: He creado un archivo llamado `ArchivoPrueba32.txt` en la carpeta del proyecto.
 * Al pedir `ArchivoPrueba32.txt`, el cliente muestra el texto perfectamente.
-![img2.png](Capturas/img2.png)
+  ![img2.png](Capturas/img2.png)
 
 * Al pedir un archivo que no existe (ej: `inventado.txt`), el servidor me devuelve el mensaje de error
-![img3.png](Capturas/img3.png)
+  ![img3.png](Capturas/img3.png)
 
 ## Conclusión
 
