@@ -1,0 +1,57 @@
+# ===============================
+# Archivos de IntelliJ IDEA
+# ===============================
+.idea/
+*.iml
+*.iws
+out/
+*.ipr
+
+# ===============================
+# Archivos de sistema
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Archivos de compilación de Maven
+# ===============================
+target/
+*.log
+*.class
+
+# ===============================
+# Archivos de dependencias
+# ===============================
+/.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+**/dependency-reduced-pom.xml
+**/release.properties
+
+# ===============================
+# Archivos generados
+# ===============================
+/generated-sources/
+/generated-test-sources/
+/build/
+
+# ===============================
+# Archivos temporales y caches
+# ===============================
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# ===============================
+# Logs
+# ===============================
+logs/
+*.log
+
+# ===============================
+# Eclipse (si alguien abre el proyecto allí)
+# ===============================
+.classpath
+.project
+.settings/
