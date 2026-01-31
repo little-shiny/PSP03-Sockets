@@ -1,5 +1,7 @@
 # Memoria de la Tarea PSP03: Programación de Sockets en Java
 
+[Enlace al repositorio en GitHub](https://github.com/little-shiny/PSP03-Sockets)
+
 ## Introducción
 
 En esta práctica he desarrollado dos mini aplicaciones basadas en el modelo cliente/servidor utilizando`java.net`. El objetivo es entender cómo se comunican dos programas a través de la red usando TCP, gestionando puertos específicos y flujos de datos.
