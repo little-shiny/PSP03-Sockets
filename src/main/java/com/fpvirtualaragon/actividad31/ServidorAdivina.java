@@ -22,10 +22,13 @@ public class ServidorAdivina {
             DataOutputStream flujoSalida = new DataOutputStream(miCliente.getOutputStream());
 
             int numeroRecibido = -1;
+            final int MAX_INTENTOS = 5;
+            int intentos = 0;
 
-            // El bucle sigue hasta que el cliente acierte
-            while (numeroRecibido != secreto) {
+            // El bucle sigue hasta que el cliente acierte o se cumplan los intentos
+            while ((numeroRecibido != secreto) && (intentos < MAX_INTENTOS)) {
                 numeroRecibido = flujoEntrada.readInt();
+                intentos ++;
 
                 if (numeroRecibido < secreto) {
                     flujoSalida.writeUTF("Te has quedado corto, el número es mayor.");
